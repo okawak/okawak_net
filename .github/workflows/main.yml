@@ -43,4 +43,4 @@ jobs:
       - name: Deploy
         if: success()
         working-directory: dist/okawak_net/browser
-        run: aws s3 sync ${{env.SOURCE_DIR}} s3://oidc-example
+        run: aws s3 sync ${{env.SOURCE_DIR}} s3://${{env.AWS_S3_BUCKET}}
